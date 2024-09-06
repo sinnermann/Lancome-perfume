@@ -1,0 +1,116 @@
+.card {
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+  position: relative;
+  height: 510px;
+
+  &__side {
+    height: 510px;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px #8d8c8c;
+
+    &-front {
+      background-color: #fff;
+    }
+
+    &-back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, #dd86d2a2, #7a176f);
+      }
+      &-2 {
+        background-image: linear-gradient(to right bottom, #f06363a2, #dae911);
+      }
+      &-3 {
+        background-image: linear-gradient(to right bottom, #0e11dda2, #4aa8df);
+      }
+    }
+  }
+
+  &:hover &__side-front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side-back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 230px;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &-1 {
+      background-image: linear-gradient(to right bottom, #dd86d2a2, #7a176f),
+        url(../../img/zenlashidole7.png);
+    }
+    &-2 {
+      background-image: linear-gradient(to right bottom, #f06363a2, #e91f11),
+        url(../../img/zend.jpg);
+    }
+    &-3 {
+      background-image: linear-gradient(to right bottom,  #0e11dda2, #4aa8df),
+        url(../../img/zen-horse.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 120px;
+    left: 20px;
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 18px;
+        padding: 10px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__price-box {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__price-only {
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 60px;
+    font-weight: 500;
+  }
+}

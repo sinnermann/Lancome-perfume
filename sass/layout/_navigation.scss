@@ -1,0 +1,145 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: #fff;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    top: 60px;
+    right: 60px;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgb(187, 186, 186);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__background {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    top: 65px;
+    right: 65px;
+    background-image: radial-gradient(#ca80c0, rgba(204, 89, 250, 0.603));
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    //transform: scale(80);
+  }
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0; //THIS WILL REMOVE BG THAT NEEDS TO APEAR ONLY AFTER HAMBURGER ICON IS CLICKED
+    width: 0; //THIS WILL REMOVE THE LINKS OF THE MENU ITEMS
+    transition: opacity 0.8s;
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+  &__item {
+    margin: 10px;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 30px;
+      font-weight: 300;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        #fff 50%
+      );
+
+      background-size: 220%;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: grey;
+      transform: translateX(10px);
+    }
+  }
+
+  //Functionality
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+  //Icon
+  &__icon {
+    position: relative;
+    margin-top: 35px;
+    &,
+    &::before,
+    &::after {
+      width: 30px;
+      height: 2px;
+      background-color: darkgray;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transform: all .2s;
+    }
+
+    &::before {
+      top: -8px;
+    }
+    &::after {
+      top: 8px;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -10px;
+  }
+  &__button:hover &__icon::after {
+    top: 10px;
+  }
+
+  &__checkbox:checked + &__button &__icon{
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+    
+
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+    
+
+  }
+}
