@@ -1,9 +1,3 @@
-/*
-COLORS:
-$color-primary: rgba(221, 160, 252, 0.8);
-$color-primary-dark: rgba(13, 14, 13, 0.8);
-*/
-/* Nulifies all default settings */
 *,
 *::before,
 *::after {
@@ -15,7 +9,7 @@ $color-primary-dark: rgba(13, 14, 13, 0.8);
 body {
   box-sizing: border-box;
 }
-
+  
 /* General <body> settings */
 /* CREATING ANIMATIONS FOR HERO HEADINGS TEXTS TO COME FROM LEFT & RIGHT */
 @keyframes moveInLeft {
@@ -92,7 +86,11 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, rgba(221, 160, 252, 0.8), rgba(13, 14, 13, 0.8));
+  background-image: linear-gradient(
+    to right,
+    rgba(221, 160, 252, 0.8),
+    rgba(13, 14, 13, 0.8)
+  );
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.2s;
@@ -145,14 +143,23 @@ body {
 
 .section-features {
   padding: 200px 0;
-  background-image: linear-gradient(to right bottom, rgba(221, 160, 252, 0.8), rgba(13, 14, 13, 0.8)), url(../img/ZEN.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(221, 160, 252, 0.8),
+      rgba(13, 14, 13, 0.8)
+    ),
+    url(../img/ZEN.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -100px;
-  transform: skewY(-7deg); /* this is to skew/change direction of the div & place it from from lower to hight angle */
+  transform: skewY(
+    -7deg
+  ); /* this is to skew/change direction of the div & place it from from lower to hight angle */
 }
 .section-features > * {
-  transform: skewY(7deg); /* this is to place  the cards evenly in oe direction */
+  transform: skewY(
+    7deg
+  ); /* this is to place  the cards evenly in oe direction */
 }
 
 .section-tours {
@@ -168,11 +175,21 @@ body {
 
 .section-booking {
   padding: 30px 0;
-  background-image: linear-gradient(to right bottom, rgba(221, 160, 252, 0.8), rgba(13, 14, 13, 0.8));
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(221, 160, 252, 0.8),
+    rgba(13, 14, 13, 0.8)
+  );
 }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../img/zenlashidole7.png);
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../../img/zenlashidole7.png);
   background-size: cover;
   height: 500px;
   border-radius: 3px;
@@ -352,7 +369,8 @@ body {
   animation-fill-mode: backwards;
 }
 
-.btn-text:link, .btn-text:visited {
+.btn-text:link,
+.btn-text:visited {
   font-size: 16px;
   color: rgba(124, 66, 153, 0.8);
   display: inline-block;
@@ -374,11 +392,21 @@ body {
 
 .header {
   height: 95vh; /* this means that at every point, the hight of this element is to be 95% of the viewport height */
-  background-image: linear-gradient(to right bottom, rgba(221, 160, 252, 0.8), rgba(13, 14, 13, 0.8)), url(../img/zendaya-lancome.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(221, 160, 252, 0.8),
+      rgba(13, 14, 13, 0.8)
+    ),
+    url(../img/zendaya-lancome.jpg);
   background-size: cover;
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /*THIS IS WHAT CREATES A SHAPE OF THE ELEMENT/DIV */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /*THIS IS WHAT CREATES A SHAPE OF THE ELEMENT/DIV */
   position: relative;
 }
 
@@ -396,7 +424,10 @@ body {
   position: absolute;
   top: 40%; /* MOVES THE DIV 40% LOWER FROM THE TOP */
   left: 50%; /* MOVES THE DIV 50% FROM THE LEFT */
-  transform: translate(-50%, -50%); /* THIS PLACES THE BLOCK TO THE VERY CENTER OF MAIN BLOCK */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* THIS PLACES THE BLOCK TO THE VERY CENTER OF MAIN BLOCK */
   text-align: center; /* this is to place the hero button to the center */
 }
 
@@ -412,10 +443,10 @@ body {
   display: table;
   clear: both;
 }
-.row [class^=col-] {
+.row [class^="col-"] {
   float: left;
 }
-.row [class^=col-]:not(:last-child) {
+.row [class^="col-"]:not(:last-child) {
   margin-right: 60px;
 }
 .row .col-1-of-2 {
@@ -493,7 +524,11 @@ body {
   font-size: 60px;
   margin-bottom: 10px;
   display: inline-block;
-  background-image: linear-gradient(to right, rgba(221, 160, 252, 0.8), rgba(13, 14, 13, 0.8));
+  background-image: linear-gradient(
+    to right,
+    rgba(221, 160, 252, 0.8),
+    rgba(13, 14, 13, 0.8)
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -529,13 +564,25 @@ body {
   transform: rotateY(180deg);
 }
 .card__side-back-1 {
-  background-image: linear-gradient(to right bottom, rgba(221, 134, 210, 0.6352941176), #7a176f);
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(221, 134, 210, 0.6352941176),
+    #7a176f
+  );
 }
 .card__side-back-2 {
-  background-image: linear-gradient(to right bottom, rgba(240, 99, 99, 0.6352941176), #dae911);
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(240, 99, 99, 0.6352941176),
+    #dae911
+  );
 }
 .card__side-back-3 {
-  background-image: linear-gradient(to right bottom, rgba(14, 17, 221, 0.6352941176), #4aa8df);
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(14, 17, 221, 0.6352941176),
+    #4aa8df
+  );
 }
 .card:hover .card__side-front {
   transform: rotateY(-180deg);
@@ -551,13 +598,28 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 .card__picture-1 {
-  background-image: linear-gradient(to right bottom, rgba(221, 134, 210, 0.6352941176), #7a176f), url(../../img/zenlashidole7.png);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(221, 134, 210, 0.6352941176),
+      #7a176f
+    ),
+    url(../../img/zenlashidole7.png);
 }
 .card__picture-2 {
-  background-image: linear-gradient(to right bottom, rgba(240, 99, 99, 0.6352941176), #e91f11), url(../../img/zend.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(240, 99, 99, 0.6352941176),
+      #e91f11
+    ),
+    url(../../img/zend.jpg);
 }
 .card__picture-3 {
-  background-image: linear-gradient(to right bottom, rgba(14, 17, 221, 0.6352941176), #4aa8df), url(../../img/zen-horse.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(14, 17, 221, 0.6352941176),
+      #4aa8df
+    ),
+    url(../../img/zen-horse.jpg);
 }
 .card__heading {
   font-size: 30px;
@@ -619,7 +681,7 @@ body {
   background-color: orangered;
   shape-outside: circle(50% at 50% 50%);
   -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
   transform: translateX(-30px) skewX(12deg);
   position: relative;
 }
@@ -667,7 +729,7 @@ body {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .footer {
@@ -697,14 +759,16 @@ body {
 .footer__item:not(:last-child) {
   margin-right: 15px;
 }
-.footer__link:link, .footer__link:visited {
+.footer__link:link,
+.footer__link:visited {
   color: lightgray;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
   transition: all 0.2s;
 }
-.footer__link:hover, .footer__link:active {
+.footer__link:hover,
+.footer__link:active {
   color: rgb(168, 4, 155);
   transform: rotate(5deg) scale(1.3);
 }
@@ -764,7 +828,8 @@ body {
 .navigation__item {
   margin: 10px;
 }
-.navigation__link:link, .navigation__link:visited {
+.navigation__link:link,
+.navigation__link:visited {
   display: inline-block;
   font-size: 30px;
   font-weight: 300;
@@ -772,11 +837,17 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    #fff 50%
+  );
   background-size: 220%;
   transition: all 0.4s;
 }
-.navigation__link:hover, .navigation__link:active {
+.navigation__link:hover,
+.navigation__link:active {
   background-position: 100%;
   color: grey;
   transform: translateX(10px);
@@ -792,13 +863,16 @@ body {
   position: relative;
   margin-top: 35px;
 }
-.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
   width: 30px;
   height: 2px;
   background-color: darkgray;
   display: inline-block;
 }
-.navigation__icon::before, .navigation__icon::after {
+.navigation__icon::before,
+.navigation__icon::after {
   content: "";
   position: absolute;
   left: 0;
@@ -844,7 +918,8 @@ body {
   opacity: 1;
   visibility: visible;
 }
-.popup__close:link, .popup__close:visited {
+.popup__close:link,
+.popup__close:visited {
   color: darkgray;
   position: absolute;
   top: 25px;
@@ -889,11 +964,11 @@ body {
   font-size: 14px;
   margin-bottom: 40px;
   -moz-column-count: 3;
-       column-count: 3;
+  column-count: 3;
   -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
   -moz-column-rule: 1px solid lightgrey;
-       column-rule: 1px solid lightgrey;
+  column-rule: 1px solid lightgrey;
   -webkit-hyphens: auto;
   hyphens: auto;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
